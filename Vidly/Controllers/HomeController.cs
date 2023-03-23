@@ -8,6 +8,7 @@ namespace Vidly.Controllers
 {
     public class HomeController : Controller
     {
+        [OutputCache(Duration = 0, VaryByParam = "*", NoStore = true)]//caching the renderred html
         public ActionResult Index()
         {
             return View();
